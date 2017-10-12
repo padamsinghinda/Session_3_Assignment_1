@@ -6,16 +6,7 @@ Created on Sun Oct  8 21:32:39 2017
 """
 import sys
 
-def my_filter(func, sequence):
-    try:
-        filtered_data = []
-        for item in sequence :
-            if func(item) :
-                filtered_data.append(item)
-    except Exception as e:
-        return sys.exc_info()[1]
-    return filtered_data
-	
+#problem statement 1 - my reduce function
 def my_reduce(func, sequence):
     try:
         if len(sequence) <= 0 :
@@ -30,6 +21,17 @@ def my_reduce(func, sequence):
     except Exception as e:
         return sys.exc_info()[1]
     return temp
+
+#problem statement 2 - my filter function
+def my_filter(func, sequence):
+    try:
+        filtered_data = []
+        for item in sequence :
+            if func(item) :
+                filtered_data.append(item)
+    except Exception as e:
+        return sys.exc_info()[1]
+    return filtered_data
 
 if __name__ == '__main__' :
     pass
